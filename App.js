@@ -19,15 +19,16 @@ export default function App() {
     <View style={styles.container}>
       <ImageBackground
         style={styles.imgpginicial}
-        source={require("./src/imagens/sorvetepginicial.png")}
+        source={require("./src/imagens/cupcakes.png")}
       >
         <View style={styles.viewtransparente}>
           <Text style={styles.txt}>O toque de doçura que você merece!</Text>
           <Text style={styles.txt2}>Doce Encanto</Text>
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.button}>Press Here</Text>
-          </TouchableOpacity>
         </View>
+        <Text style={styles.txtbemvindo}>Bem-Vindo!</Text>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.txtbutton}>Entrar</Text>
+        </TouchableOpacity>
       </ImageBackground>
     </View>
   );
@@ -45,33 +46,49 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   viewtransparente: {
-    height: "30%",
+    height: "20%",
     width: "80%",
-    backgroundColor: "pink",
-    opacity: 0.9,
-    borderRadius: 30,
-    marginBottom: 60,
+    textAlign: "center",
+    bottom: "60%",
   },
   txt: {
-    fontSize: 30,
+    top: "10%",
+    fontSize: 25,
     textAlign: "center",
     fontFamily: "Playwrite_BE_VLG",
-
     color: "black",
   },
   txt2: {
-    color: "white",
-    fontSize: 24,
+    top: "12%",
+    color: "pink",
+    fontSize: 15,
     textAlign: "center",
     fontWeight: "bold",
     fontFamily: "Platypi",
   },
+  txtbemvindo: {
+    bottom: "13%",
+    fontSize: 25,
+    textAlign: "center",
+    fontFamily: "Platypi",
+    backgroundColor: "pink",
+    right: "20%",
+
+    radius: 40,
+  },
+
   button: {
     backgroundColor: "lightpink",
-    borderRadius: 50,
-    height: "20%",
-    width: "100%",
-    alignItems: "center",
+    borderRadius: 100,
+    height: "5%",
+    width: "30%",
+    bottom: "10%",
+    right: "20%",
+  },
+  txtbutton: {
+    top: "15%",
     textAlign: "center",
+    fontSize: 15,
+    fontFamily: "Platypi",
   },
 });
